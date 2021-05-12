@@ -25,25 +25,29 @@
 		
 		<div class="choice" id="premade">
 			<img src="images/gear.png" alt="premadeimg" onclick="selectTimerType('premade')">
-      <p>Premade</p>
+			<p>Premade</p>
 		</div>
 		<div class="choice" id="custom">
 			<img src="images/pencil.png" alt="customimg" onclick="selectTimerType('custom')">
-      <p>Custom</p>
+			<p>Custom</p>
 		</div>
 		
+		<button id="advancedSettings" onclick="switchSettings()">Advanced Options</button>
 		<div id="customInputParameters">
-			<h2>Warmup/Cooldown Time: <span id="warmupValue">3</span> Minutes</h2>
-			<input type="range" value="6" id="warmup" name="warmup" min="1" max="20" class="slider">
+			<h2 id="warmupTimeTitle">Warmup/Cooldown Time: <span id="warmupValue">3</span> Minutes</h2>
+			<input type="range" value="6" id="warmup" name="warmup" min="1" max="30" class="slider">
 			
-			<h2>High Intensity Duration (per section): <span id="highValue">30</span> Seconds</h2>
+			<h2 class="optionTitle">High Intensity Duration (per section): <span id="highValue">30</span> Seconds</h2>
 			<input type="range" value="6" id="highIntensity" name="highIntensity" min="1" max="24" class="slider">
 			
-			<h2>Low Intensity Duration (per section): <span id="lowValue">30</span> Seconds</h2>
-			<input type="range" value="12" id="lowIntensity" name="lowIntensity" min="1" max="36" class="slider">
+			<h2 class="optionTitle">Low Intensity Duration (per section): <span id="lowValue">30</span> Seconds</h2>
+			<input type="range" value="12" id="lowIntensity" name="lowIntensity" min="1" max="60" class="slider">
 			
-			<h2>Number of Sets</h2>
+			<h2 class="optionTitle">Number of Sets (# of high intensity training intervals)</h2>
 			<input type="text" value="6" id="setAmount">
+		</div>
+		<div id="advancedInputParameters">
+			<div id="createInterval" onclick="createNewInterval()">Create New Interval</div>
 		</div>
 		
 		<div id="actualTimer">
