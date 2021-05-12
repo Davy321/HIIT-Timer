@@ -47,14 +47,15 @@ function advanceTimer() {
 			
 		}//else
 	} else if (level == 1) {
-		sets = Number(document.getElementById("setAmount").value);
-		document.getElementById("btn").innerHTML = "Skip?";
+		sets = (Number(document.getElementById("setAmount").value) * 2) - 1;
+    
+		document.getElementById("btn").innerHTML = "Skip";
 		document.getElementById("customInputParameters").style.display = "none";
 		document.getElementById("title2").style.display = "none";
 		
-		/*warmupTime = 5;
-		highTime = 10;
-		lowTime = 15;*/
+		//warmupTime = 5;
+		//highTime = 5;
+		//lowTime = 10;
 		
 		document.getElementById("actualTimer").style.display = "block";
 		setTimeout(startInterval, warmupTime * 1000);
@@ -70,12 +71,11 @@ function advanceTimer() {
 }
 
 function startInterval() {
-	sets = (sets * 2) - 1;
 	if (currentSet >= sets) {
 		startCooldown();
 		return;
 	}
-	
+  
 	if (currentIntensity == 1) {
 		document.body.style.backgroundColor = "#ffabab";
 		document.getElementById("timerTitle").innerHTML = "High Intensity";
@@ -104,7 +104,7 @@ function startCooldown() {
 	setTimeout(function () {
 			document.getElementById("timerTitle").innerHTML = "You did it,";
 			document.getElementById("timer").innerHTML = "Congrats!";
-			document.getElementById("btn").innerHTML = "Restart?";
+			document.getElementById("btn").innerHTML = "Restart";
 		}, warmupTime * 1000);
 		startTimer(warmupTime - 1);
 }//startCooldown
@@ -116,9 +116,10 @@ warmupTime = warmupSlider.value * 30;
 
 function startTimer(duration) {
     let timer = duration, minutes, seconds;
+	let temp = duration + 1;
 	
-	minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10) + 1;
+	minutes = parseInt(temp / 60, 10);
+    seconds = parseInt(temp % 60, 10);
 	minutes = minutes < 10 ? "0" + minutes : minutes;
     seconds = seconds < 10 ? "0" + seconds : seconds;
 	document.getElementById("timer").textContent = minutes + ":" + seconds;
