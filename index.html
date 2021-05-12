@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Timer</title>
+	<link rel="stylesheet" href="styles.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="/images/icons/icon-192x192.png" />
+  <link rel="shortcut icon" href="images/icons/icon-192x192.png" />
+  <meta name="theme-color" content="#FFFFFF" />
+  <meta name="description" content="A Workout Timer Designed Specifically For a HIIT Workout.">
+</head>
+<body>
+	
+	<div id="header">
+		<h1 id="title">HIIT Timer</h1>
+	</div>
+	
+	<div class="container">
+		<h1 id="title2">Choose a timer option:</h1>
+		<h2 id="error">Please Select an Option</h2>
+		
+		<div class="choice" id="premade">
+			<img src="images/gear.png" alt="premadeimg" onclick="selectTimerType('premade')">
+      <p>Premade</p>
+		</div>
+		<div class="choice" id="custom">
+			<img src="images/pencil.png" alt="customimg" onclick="selectTimerType('custom')">
+      <p>Custom</p>
+		</div>
+		
+		<div id="customInputParameters">
+			<h2>Warmup/Cooldown Time: <span id="warmupValue">3</span> Minutes</h2>
+			<input type="range" value="6" id="warmup" name="warmup" min="1" max="20" class="slider">
+			
+			<h2>High Intensity Duration (per section): <span id="highValue">30</span> Seconds</h2>
+			<input type="range" value="6" id="highIntensity" name="highIntensity" min="1" max="24" class="slider">
+			
+			<h2>Low Intensity Duration (per section): <span id="lowValue">30</span> Seconds</h2>
+			<input type="range" value="12" id="lowIntensity" name="lowIntensity" min="1" max="36" class="slider">
+			
+			<h2>Number of Sets</h2>
+			<input type="text" value="6" id="setAmount">
+		</div>
+		
+		<div id="actualTimer">
+			<h1 id="timerTitle">Warmup</h1>
+			<div id="timer"></div>
+		</div>
+		
+		<button id="btn" onclick="advanceTimer()">Continue</button>
+	</div>
+	
+	
+	<script src="client.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+body {
+	margin:0;
+	padding:0;
+	font-family: 'Raleway', sans-serif;
+	text-align:center;
+	background-color:#d9eaf0;
+}
+
+div {
+	/*
+	border:1px solid black;
+	*/
+}
+
+span {
+	font-size:45px;
+}
+
+#header {
+	background-color:white;
+	padding:20px 0 10px 0;
+	margin:0 0 20px 0;
+	border-bottom:2px solid black;
+	width:100%;
+}
+
+#title {
+	font-size:35px;
+}
+
+#title2 {
+	font-size:50px;
+}
+
+#error {
+	display:none;
+	color:red;
+	font-size:25px;
+	font-family: sans-serif;
+}
+
+.container {
+	width:900px;
+	margin:auto;
+}
+
+#premade {
+	float:left;
+	background-color:#ffdcb8;
+	border:4px solid #fc9003;
+}
+
+#custom {
+	float:right;
+	background-color:#8fabc9;
+	border:4px solid #446e9b;
+}
+
+.choice {
+	padding:20px 0 0 0;
+	height:300px;
+	width:400px;
+	font-size:25px;
+	font-weight:bold;
+}
+
+.choice img {
+	width:200px;
+  height:200px;
+	padding:15px 0 15px 0;
+	transition:0.3s;
+}
+.choice img:hover {
+	padding:0;
+	width:230px;
+  height:230px;
+}
+
+.choice p {
+	margin: 0 0 20px 0;
+}
+
+#btn {
+	width:200px;
+	height:60px;
+	margin:20px 0 0 0;
+	font-size:25px;
+}
+
+
+#customInputParameters {
+	display:none;
+	font-weight:bold;
+}
+#customInputParameters h2 {
+	margin-top:40px;
+}
+
+#warmup {
+	margin-top:0px;
+	width:50vw;
+}
+
+#highIntensity {
+	width:50vw;
+}
+
+#lowIntensity {
+	width:50vw;
+}
+
+#setAmount {
+	text-align:center;
+	height:60px;
+	font-size:30px;
+	width:100px;
+}
+
+.slider {
+	border-radius: 25px;
+	height:25px;
+  appearance: none;
+  background: white; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border:1px solid black;
+}
+
+.slider::-webkit-slider-thumb {
+	border-radius: 25px;
+  appearance: none;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: #0084ff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+	border-radius: 25px;
+  width: 40px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: #0084ff; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+#timer {
+	font-size:70px;
+	margin:auto;
+}
+
+#timerTitle {
+	font-size:50px;
+	margin:0;
+}
+
+#actualTimer {
+	margin:150px auto 200px auto;
+	padding:20px;
+	text-align:center;
+	display:none;
+	border:1px solid black;
+	background-color:white;
+	width:400px;
+}
+
+@media screen and (max-width: 935px) {
+	.container {
+		width:100vw;
+		margin:40px auto 0 auto;
+	}
+	
+	#title2 {
+		width:90vw;
+		margin:0 auto 20px auto;
+	}
+	
+	.choice {
+		margin:0 auto 20px auto;
+	}
+	#premade {
+		float:none;
+		width:80vw;
+	}
+
+	#custom {
+		float:none;
+		width:80vw;
+	}
+	
+	#customInputParameters h2 {
+		width:90vw;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	
+	#setAmount {
+		margin-bottom:30px;
+	}
+	
+	#btn {
+		margin:10px 0 20px 0;
+	}
+	
+	#actualTimer {
+		width:80vw;
+		margin:0 auto 50px auto;
+	}
+	
+	#timer {
+		font-size:50px;
+	}
+	
+}
+
+@media screen and (max-width: 1169px) {
+  #actualTimer {
+    margin: 150px auto 100px auto;
+  }
+}
