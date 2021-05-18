@@ -21,7 +21,7 @@
 	
 	<div class="container">
 		<h1 id="title2">Choose a timer option:</h1>
-		<h2 id="error">Please Select an Option</h2>
+		<h2 class="error" id="err1">Please Select an Option</h2>
 		
 		<div class="choice" id="premade">
 			<img src="images/gear.png" alt="premadeimg" onclick="selectTimerType('premade')">
@@ -32,7 +32,7 @@
 			<p>Custom</p>
 		</div>
 		
-		<button id="advancedSettings" onclick="switchSettings()">Advanced Options</button>
+		<button id="advancedSettings" onclick="switchSettings()">Switch to Advanced</button>
 		<div id="customInputParameters">
 			<h2 id="warmupTimeTitle">Warmup/Cooldown Time: <span id="warmupValue">3</span> Minutes</h2>
 			<input type="range" value="6" id="warmup" name="warmup" min="1" max="30" class="slider">
@@ -48,6 +48,19 @@
 		</div>
 		<div id="advancedInputParameters">
 			<div id="createInterval" onclick="createNewInterval()">Create New Interval</div>
+			
+			<div id="fileIO">
+				<div id="FDContainer">
+				<p class="fileLabels" id="fileDownloadText" for="fileDownload">Download Timer:</p>
+				<button id="fileDownload" onclick="downloadTimer()">Download</button>
+				</div>
+				<div id="FUContainer">
+				<p class="fileLabels" id="fileUploadText" for="fileUpload">Import Timer:</p>
+				<input type="file" id="fileUpload" name="fileUpload">
+				</div>
+			</div>
+			
+			<h2 class="error" id="err2">There is an invalid input</h2>
 		</div>
 		
 		<div id="actualTimer">
